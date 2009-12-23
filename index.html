@@ -3,4 +3,14 @@ layout: default
 title: Chandler Kent
 ---
 
-Welcome!
+<div id="sidebar">
+</div>
+
+<div id="content">
+    {% for post in site.posts limit:10 %}
+        <div class="post">
+            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+            {{ post.content }}
+        </div>
+    {% endfor %}
+</div>
