@@ -2,6 +2,18 @@
 <html lang="en">
     {% include head.html %}
     <body>
-        {{ content }}
+        <div id="container">
+            <div id="banner">
+                <h1><a href="/">Chandler Kent</a><a id="home" href="/">Home</a></h1>
+            </div>
+
+            <div id="sidebar">
+                {% include sidebar.html %}
+            </div>
+        
+            <div id="content">
+                {{ content }}
+            </div>
+        </div>
     </body>
 </html>

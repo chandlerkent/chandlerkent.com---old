@@ -3,14 +3,10 @@ layout: default
 title: Chandler Kent
 ---
 
-<div id="sidebar">
-</div>
-
-<div id="content">
-    {% for post in site.posts limit:10 %}
-        <div class="post">
-            <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
-            {{ post.content }}
-        </div>
-    {% endfor %}
-</div>
+{% for post in site.posts limit:10 %}
+    <div class="post">
+        <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
+        <div class="date">{{ post.date | date: "%d %b %Y"}}</div>
+        {{ post.content }}
+    </div>
+{% endfor %}
