@@ -71,16 +71,12 @@ a
     text-align: right
     width= !sidebar_width - !content_padding
     margin:
-        top: 135px
         right= (!sidebar_width * -1)
-        bottom: 0
-        left: 0 
     position: fixed
-    top: 0
     ul
         list-style-type: none
         li
-            margin: 0.25em 0 0.25em 0
+            margin: 0 0 0.25em 0
         a
             color: gray
             text-decoration: none
@@ -93,7 +89,8 @@ a
         left= !sidebar_width
     width= !content_width
     .post
-        margin: 1em 0 4em 0
+        margin: 0 0 2em 0
+        border-bottom: thin solid lightgray
         h1
             text-transform: capitalize
             font-size: 1.1em
@@ -111,7 +108,7 @@ a
             padding: 0
         .related
             border-top: medium solid lightgray
-            padding: 1em 0
+            padding: 1em 0 0 0
             margin: 1em 0
             text-transform: uppercase
             font-size: 1.5em
@@ -128,7 +125,17 @@ a
                         color: black
                         font-weight: bold
                         margin: 0 0.25em 0 0
-        .tags
+        div.comments
+            border-top: medium solid lightgray
+            padding: 1em 0 0 0
+            margin: 1em 0
+            text-transform: uppercase
+            font-size: 1.5em
+            font-weight: bold
+        p.comments
+            text-align: right
+            font-size: 0.93m
+        div.tags
             text-transform: lowercase
             display: inline
             font-size: 0.75em
@@ -149,6 +156,6 @@ a
         list-style-type: none
         li
             color: black
-            margin: 1em 0 1em 0
+            margin: 0 0 1em 0
             .date
                 color: gray

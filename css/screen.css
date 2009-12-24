@@ -55,16 +55,12 @@ a {
   font-size: 0.95em;
   text-align: right;
   width: 150px;
-  margin-top: 135px;
   margin-right: -200px;
-  margin-bottom: 0;
-  margin-left: 0;
-  position: fixed;
-  top: 0; }
+  position: fixed; }
   #sidebar ul {
     list-style-type: none; }
     #sidebar ul li {
-      margin: 0.25em 0 0.25em 0; }
+      margin: 0 0 0.25em 0; }
     #sidebar ul a {
       color: gray;
       text-decoration: none; }
@@ -77,7 +73,8 @@ a {
     margin-left: 200px;
   width: 600px; }
   #content .post {
-    margin: 1em 0 4em 0; }
+    margin: 0 0 2em 0;
+    border-bottom: thin solid lightgray; }
     #content .post h1 {
       text-transform: capitalize;
       font-size: 1.1em; }
@@ -95,7 +92,7 @@ a {
       padding: 0; }
     #content .post .related {
       border-top: medium solid lightgray;
-      padding: 1em 0;
+      padding: 1em 0 0 0;
       margin: 1em 0;
       text-transform: uppercase;
       font-size: 1.5em;
@@ -112,27 +109,37 @@ a {
             color: black;
             font-weight: bold;
             margin: 0 0.25em 0 0; }
-    #content .post .tags {
+    #content .post div.comments {
+      border-top: medium solid lightgray;
+      padding: 1em 0 0 0;
+      margin: 1em 0;
+      text-transform: uppercase;
+      font-size: 1.5em;
+      font-weight: bold; }
+    #content .post p.comments {
+      text-align: right;
+      font-size: 0.93m; }
+    #content .post div.tags {
       text-transform: lowercase;
       display: inline;
       font-size: 0.75em;
       text-align: right;
       color: gray; }
-      #content .post .tags ul {
+      #content .post div.tags ul {
         list-style-type: none; }
-        #content .post .tags ul li {
+        #content .post div.tags ul li {
           margin: 0 0.05em 0 0;
           display: inline; }
-          #content .post .tags ul li a {
+          #content .post div.tags ul li a {
             color: #0000aa;
             text-decoration: none; }
-            #content .post .tags ul li a:hover {
+            #content .post div.tags ul li a:hover {
               color: black;
               text-decoration: underline; }
   #content ul.archive {
     list-style-type: none; }
     #content ul.archive li {
       color: black;
-      margin: 1em 0 1em 0; }
+      margin: 0 0 1em 0; }
       #content ul.archive li .date {
         color: gray; }
