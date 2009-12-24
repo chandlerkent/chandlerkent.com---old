@@ -1,0 +1,3 @@
+[submodule "code"]
+	path = code
+	url = git://github.com/chandlerkent/sample-projects.git
