@@ -2,3 +2,5 @@ _site
 *.tmproj
 .sass-cache
 iphlickr
+missing.html
+php.ini
