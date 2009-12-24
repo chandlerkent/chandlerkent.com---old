@@ -5,7 +5,9 @@ layout: default
 <div class="post">
     <h1><a href="{{ page.url }}">{{ page.title }}</a></h1>
     <div class="date">{{ page.date | date: "%d %b %Y"}}</div>
+    
     {{ content}}
+    
     {% unless page.tags == empty %}
     <div class="tags">
         <ul>
@@ -14,6 +16,17 @@ layout: default
             <li><a href="http://www.google.com/search?q={{ tag }}+site:chandlerkent.com">{{ tag }}</a>{% unless forloop.last %},{% endunless %}</li>
             {% endfor %}
         <ul>
+    </div>
+    {% endunless %}
+    
+    {% unless site.related_posts == empty %}
+    <div class="related">
+        Possibly related posts
+        <ul>
+            {% for related_post in site.related_posts %}
+            <li><span class="date">{{ related_post.date | date:"%m-%d"}}</span><a href="{{ related_post.url }}">{{ related_post.title }}</a></li>
+            {% endfor %}
+        </ul>
     </div>
     {% endunless %}
 </div>
