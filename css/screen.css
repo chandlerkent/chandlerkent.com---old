@@ -84,6 +84,8 @@ a {
       padding-top: 1em; }
     #content .post p {
       margin: 0.75em 0; }
+    #content .post ul {
+      margin: 0 0 0 2em; }
     #content .post .date {
       color: darkgray;
       font-size: 0.9em;
