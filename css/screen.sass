@@ -23,13 +23,18 @@ h1
     
 p
     margin: 1em 0
-    
+ 
+
+/* Links */
+!link_color = #00a
+!link_hover = black
+!link_visited = #a0a   
 a
-    color: #00a
+    color= !link_color
     &:hover
-        color: black
+        color= !link_hover
     &:visited
-        color: #a0a
+        color= !link_visited
 
 /* Variables */
 
@@ -59,7 +64,7 @@ a
         font-size: 0.75em
         padding-left: 1.5em
         &:hover
-            color: black            
+            color= !link_hover            
 
 #sidebar
     font-size: 0.95em
@@ -80,7 +85,7 @@ a
             color: gray
             text-decoration: none
             &:hover
-                color: black
+                color= !link_hover
         
 #content
     text-align: justify
@@ -104,6 +109,23 @@ a
             font-style: italic
             margin: 0
             padding: 0
+        .tags
+            text-transform: lowercase
+            display: inline
+            font-size: 0.75em
+            text-align: right
+            color: gray
+            ul
+                list-style-type: none
+                li
+                    margin: 0 0.05em 0 0
+                    display: inline
+                    a
+                        color= !link_color
+                        text-decoration: none
+                        &:hover
+                            color= !link_hover
+                            text-decoration: underline
     ul.archive
         list-style-type: none
         li

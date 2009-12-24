@@ -21,12 +21,13 @@ h1 {
 p {
   margin: 1em 0; }
 
+/* Links */
 a {
-  color: #00a; }
+  color: #0000aa; }
   a:hover {
     color: black; }
   a:visited {
-    color: #a0a; }
+    color: #aa00aa; }
 
 /* Variables */
 #container {
@@ -92,6 +93,23 @@ a {
       font-style: italic;
       margin: 0;
       padding: 0; }
+    #content .post .tags {
+      text-transform: lowercase;
+      display: inline;
+      font-size: 0.75em;
+      text-align: right;
+      color: gray; }
+      #content .post .tags ul {
+        list-style-type: none; }
+        #content .post .tags ul li {
+          margin: 0 0.05em 0 0;
+          display: inline; }
+          #content .post .tags ul li a {
+            color: #0000aa;
+            text-decoration: none; }
+            #content .post .tags ul li a:hover {
+              color: black;
+              text-decoration: underline; }
   #content ul.archive {
     list-style-type: none; }
     #content ul.archive li {
