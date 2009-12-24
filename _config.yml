@@ -1,8 +1,9 @@
 destination:    ./_site
 auto:           true
 server:         true
-lsi:            false
+lsi:            true
 server_port:    4000
-pygments:       false
+pygments:       true
 markdown:       rdiscount
 permalink:      date
+base_url:       http://www.chandlerkent.com/
