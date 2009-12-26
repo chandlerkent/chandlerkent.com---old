@@ -21,14 +21,6 @@ h1 {
 p {
   margin: 1em 0; }
 
-/* Links */
-a {
-  color: #0000aa; }
-  a:hover {
-    color: black; }
-  a:visited {
-    color: #aa00aa; }
-
 /* Variables */
 #container {
   width: 800px;
@@ -37,6 +29,7 @@ a {
 
 #banner {
   font-size: 1.5em;
+  text-transform: lowercase;
   padding-top: 2em;
   padding-right: 0;
   padding-bottom: 1em;
@@ -47,10 +40,10 @@ a {
     #banner a:hover {
       color: black; }
   #banner #home {
-    text-transform: lowercase;
+    text-transform: uppercase;
     color: gray;
-    font-size: 0.75em;
-    padding-left: 1.5em; }
+    font-size: 0.5em;
+    padding: 1em 1em 0 1em; }
     #banner #home:hover {
       color: black; }
 
@@ -75,6 +68,12 @@ a {
   margin: 0;
     margin-left: 200px;
   width: 600px; }
+  #content a {
+    text-decoration: none;
+    color: #0000aa; }
+    #content a:hover {
+      text-decoration: underline;
+      color: black; }
   #content .post {
     margin: 0 0 2em 0;
     border-bottom: thin solid lightgray; }
