@@ -1,0 +1,20 @@
+---
+layout: default
+title: Projects
+
+projects: [
+            {name: chandlerkent.com, url: http://github.com/chandlerkent/chandlerkent.com, description: "The code for this site."},
+            {name: iPhlickr, url: http://www.iphlickr.com/, description: "An iPhone-optimized interface for Flickr."},
+            {name: Project OSL, url: http://github.com/hammerdr/Omni-Software-Localization, description: "Community-powered localization."},
+            {name: BeanCounter, url: http://github.com/chandlerkent/BeanCounter, description: "Metrics and code-analysis for Cappuccino and Objective-J applications."}
+          ]
+---
+
+<div class="projects">
+{% for project in page.projects %}
+    <div>
+        <h1><a href="{{ project.url }}">{{ project.name }}</a></h1>
+        {{ project.description }}
+    </div>
+{% endfor %}
+</div>

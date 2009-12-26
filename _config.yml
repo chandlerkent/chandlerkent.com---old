@@ -7,3 +7,4 @@ pygments:       true
 markdown:       rdiscount
 permalink:      date
 base_url:       http://www.chandlerkent.com/
+feed_url:       http://feeds.feedburner.com/chandlerkent

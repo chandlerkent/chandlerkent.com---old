@@ -42,7 +42,10 @@ a {
   padding-bottom: 1em;
   padding-left: 200px; }
   #banner a {
+    color: rgb(170, 0, 0);
     text-decoration: none; }
+    #banner a:hover {
+      color: black; }
   #banner #home {
     text-transform: lowercase;
     color: gray;
@@ -78,6 +81,11 @@ a {
     #content .post h1 {
       text-transform: capitalize;
       font-size: 1.1em; }
+      #content .post h1 a {
+        color: #0000aa;
+        text-decoration: none; }
+        #content .post h1 a:hover {
+          text-decoration: underline; }
     #content .post h2 {
       padding-top: 1em; }
     #content .post p {
@@ -143,3 +151,13 @@ a {
       margin: 0 0 1em 0; }
       #content ul.archive li .date {
         color: gray; }
+  #content div.projects {
+    margin: 0;
+    padding: 0; }
+    #content div.projects div {
+      padding: 0;
+      margin: 0 0 2em 0; }
+    #content div.projects h1 {
+      font-size: 1.1em;
+      margin: 0 0 0.5em 0;
+      padding: 0; }

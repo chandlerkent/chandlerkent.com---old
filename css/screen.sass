@@ -57,14 +57,17 @@ a
         bottom: 1em
         left= !sidebar_width
     a
+        color: rgb(170, 0, 0)
         text-decoration: none
+        &:hover
+            color= !link_hover
     #home
         text-transform: lowercase
         color: gray
         font-size: 0.75em
-        padding-left: 1.5em
+        padding-left: 1.5em     
         &:hover
-            color= !link_hover            
+            color= !link_hover
 
 #sidebar
     font-size: 0.95em
@@ -94,6 +97,11 @@ a
         h1
             text-transform: capitalize
             font-size: 1.1em
+            a
+                color= !link_color
+                text-decoration: none
+                &:hover
+                    text-decoration: underline
         h2
             padding-top: 1em
         p
@@ -159,3 +167,13 @@ a
             margin: 0 0 1em 0
             .date
                 color: gray
+    div.projects
+        margin: 0
+        padding: 0
+        div
+            padding: 0
+            margin: 0 0 2em 0
+        h1
+            font-size: 1.1em
+            margin: 0 0 0.5em 0
+            padding: 0

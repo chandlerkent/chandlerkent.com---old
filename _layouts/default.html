@@ -16,6 +16,7 @@
             </div>
         </div>
         
+        {% if page.include_comments == true %}
         <!-- Disqus -->
         <script type="text/javascript">
         //<![CDATA[
@@ -31,5 +32,6 @@
         })();
         //]]>
         </script>
+        {% endif %}
     </body>
 </html>
