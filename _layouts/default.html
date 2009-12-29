@@ -1,14 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% include head.html %}
+    <head>
+    	<meta charset="UTF-8" />
+    	<title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    	<link rel="alternate" type="application/rss+xml" href="{{ site.feed }}" />
+    	{% for css in site.css %}
+    	    <link rel="stylesheet" type="text/css" media="screen" href="{{ css }}" />
+    	{% endfor %}
+    	
+    	{% for css in page.css %}
+    	    <link rel="stylesheet" type="text/css" media="screen" href="{{ css }}" />
+    	{% endfor %}
+    	
+    	{% for js in site.js %}
+    	    <link rel="stylesheet" type="text/css" media="screen" href="{{ css }}" />
+    	{% endfor %}
+    	
+    	{% for js in page.js %}
+    	    <link rel="stylesheet" type="text/css" media="screen" href="{{ css }}" />
+    	{% endfor %}
+    </head>
     <body>
         <div id="container">
             <div id="banner">
-                <h1><a href="/">Chandler Kent</a><a id="home" href="/">Home</a></h1>
-            </div>
-
-            <div id="sidebar">
-                {% include sidebar.html %}
+                <h1>
+                    <a href="/">Chandler Kent</a>
+                    {% for nav in site.nav %}
+                        <a class="nav" href="{{ nav.url }}">{{ nav.name }}</a>
+                    {% endfor %}
+                </h1>
             </div>
         
             <div id="content">
@@ -16,22 +36,32 @@
             </div>
         </div>
         
+        <!-- JavaScript -->
+        
+        {% for js in site.js %}
+        	<script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
+		{% endfor %}
+
+		{% for js in page.js %}
+			<script src="{{ js }}" type="text/javascript" charset="utf-8"></script>
+		{% endfor %}
+		
+    	<!-- Disqus -->	
         {% if page.include_comments == true %}
-        <!-- Disqus -->
-        <script type="text/javascript">
-        //<![CDATA[
-        (function() {
-        	var links = document.getElementsByTagName('a');
-        	var query = '?';
-        	for(var i = 0; i < links.length; i++) {
-        	if(links[i].href.indexOf('#disqus_thread') >= 0) {
-        		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
-        	}
-        	}
-        	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/chandlerkent/get_num_replies.js' + query + '"></' + 'script>');
-        })();
-        //]]>
-        </script>
+            <script type="text/javascript">
+                //<![CDATA[
+                (function() {
+                	var links = document.getElementsByTagName('a');
+                	var query = '?';
+                	for(var i = 0; i < links.length; i++) {
+                	if(links[i].href.indexOf('#disqus_thread') >= 0) {
+                		query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+                	}
+                	}
+                	document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/chandlerkent/get_num_replies.js' + query + '"></' + 'script>');
+                })();
+                //]]>
+            </script>
         {% endif %}
     </body>
 </html>

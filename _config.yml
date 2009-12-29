@@ -1,10 +1,38 @@
 destination:    ./_site
 auto:           true
-lsi:            false
+pygments:       true
+sass:           true
 server:         true
 server_port:    4000
-pygments:       true
+lsi:            false
 markdown:       rdiscount
 permalink:      date
-base_url:       http://www.chandlerkent.com/
-feed_url:       http://feeds.feedburner.com/chandlerkent
+
+exclude:
+    - README.md
+    - *.tmproj
+    
+title:          Chandler Kent
+url:            http://www.chandlerkent.com
+feed:           http://feeds.feedburner.com/chandlerkent
+
+author:
+    name:       Chandler Kent
+    email:      chandler.kent@gmail.com
+    twitter:    chandlerkent
+    github:     chandlerkent
+
+nav:
+    - name:     home
+      url:      /
+    - name:     archive
+      url:      /archive.html
+    - name:     projects
+      url:      /projects.html
+    - name:     contact
+      url:      /contact.html
+    - name:     rss feed
+      url:      http://feeds.feedburner.com/chandlerkent
+      
+css:
+    - /css/screen.css

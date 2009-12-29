@@ -26,14 +26,10 @@ p
 
 /* Variables */
 
-!page_width = 800px
-!sidebar_width = 200px
-!content_padding = 50px
-!content_width = !page_width - !sidebar_width
+!page_width = 600px
 !link_color = #00a
 !link_hover = black
 !link_visited = #a0a
-
 
 #container
     width= !page_width
@@ -41,48 +37,27 @@ p
     text-align: left
 
 #banner
+    width: 100%
     font-size: 1.5em
     text-transform: lowercase
-    padding:
-        top: 2em
-        right: 0
-        bottom: 1em
-        left= !sidebar_width
+    padding: 2em 0 1em 0
     a
         color: rgb(170, 0, 0)
         text-decoration: none
         &:hover
             color= !link_hover
-    #home
+    .nav
         text-transform: uppercase
         color: gray
         font-size: 0.5em
-        padding: 1em 1em 0 1em     
+        padding: 1em 0.5em 0 0.5em     
         &:hover
             color= !link_hover
-
-#sidebar
-    font-size: 0.95em
-    text-align: right
-    width= !sidebar_width - !content_padding
-    margin:
-        right= (!sidebar_width * -1)
-    position: fixed
-    ul
-        list-style-type: none
-        li
-            margin: 0 0 0.25em 0
-        a
-            color: gray
-            text-decoration: none
-            &:hover
-                color= !link_hover
         
 #content
     text-align: justify
     margin: 0
-        left= !sidebar_width
-    width= !content_width
+    width= 100%
     a
         text-decoration: none
         color= !link_color
