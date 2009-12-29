@@ -10,7 +10,8 @@ permalink:      date
 
 exclude:
     - README.md
-    - *.tmproj
+    - chandlerkent.com.tmproj
+    - screen.sass
     
 title:          Chandler Kent
 url:            http://www.chandlerkent.com
