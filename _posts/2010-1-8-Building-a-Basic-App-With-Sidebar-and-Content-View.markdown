@@ -46,9 +46,10 @@ Finally, since I am using Atlas, I want Atlas to instantiate my `SidebarControll
 
 This won't work on its own because our project doesn't know where that file is coming from. So in the `AppController`, `@import` the class file.
 
-I kind of breezed over most of the implementation details of the `SidebarController`, so you may want to take a look at the full [SidebarController source][].
+I kind of breezed over most of the implementation details of the `SidebarController`, so you may want to take a look at the full [SidebarController][] and [SidebarColorItem][] source.
 
-[SidebarController source]: http://github.com/chandlerkent/sample-projects/blob/master/SidebarChangingContentView/SidebarController.j
+[SidebarController]: http://github.com/chandlerkent/sample-projects/blob/master/SidebarChangingContentView/SidebarController.j
+[SidebarColorItem]: http://github.com/chandlerkent/sample-projects/blob/master/SidebarChangingContentView/SidebarColorItem.j
 
 ## Create the Content View Controller
 
